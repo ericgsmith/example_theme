@@ -1,0 +1,67 @@
+/**
+ * @file 
+ *  Media Object.
+ */
+
+/*doc
+---
+title: Media object
+name: media_object
+category: components
+---
+
+The media object is a standard CSS design patter to display an item of content
+(usually an image) at it's natural width, floated to one size of content that
+does not overflow under the floated image.
+
+```html_example
+<div class="media-object">
+  <div class="media-object__media">
+    @insert image
+  </div>
+  <div class="media-object__body">
+    @insert paragraph
+  </div>
+</div>
+```
+*/
+.media-object {
+  @include clearfix();
+}
+
+.media-object__media {
+  float: left;
+  margin-right: $horizontal-margin;
+}
+
+.media-object__body {
+  overflow: hidden;
+}
+
+/*doc
+---
+title: Media object modifiers
+name: media_object_modifiers
+parent: media_object
+---
+
+Modifiers to the media object.
+
+```html_example
+<div class="media-object--right">
+  <div class="media-object__media">
+    @insert image
+  </div>
+  <div class="media-object__body">
+    @insert paragraph
+  </div>
+</div>
+```
+*/
+.media-object--right {
+  .media-object__media {
+    float: right;
+    margin-left: $horizontal-margin;
+    margin-right: 0;
+  }
+}

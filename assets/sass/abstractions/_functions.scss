@@ -1,0 +1,21 @@
+/**
+ * @file
+ *  Functions.
+ */
+
+/**
+ * Calculate REM size from pixel values.
+ *
+ * This function calculates the size in REM of a pixel value.
+ *
+ * @param $size
+ *  The size in REM.
+ * @param $base-size
+ *  The size of the base element.
+ * @return int
+ *  The REM value of the size.
+ */
+@function calculateRem($size, $base-size : 16px) {
+  $remSize: $size / $base-size;
+  @return $remSize * 1rem;
+}

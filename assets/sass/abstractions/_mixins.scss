@@ -1,0 +1,21 @@
+/**
+ * @file
+ *  Mixins.
+ */
+
+/**
+ * Font size with IE8 fallback.
+ *
+ * This mixin takes an REM size and returns the CSS for font size in REM with the
+ * fallback value in px for IE8 and below.
+ *
+ * @param $font-size
+ *  Size in px.
+ * @return css
+ *  Font size declarations.
+ */
+@mixin font-size($font-size: 12px) {
+  font-size: $font-size;
+  // IE8 and below will ignore this value as it does not interpret REM units.
+  font-size: calculateRem($font-size);
+}

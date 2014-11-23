@@ -1,0 +1,38 @@
+/**
+ * @file
+ *  Variables.
+ */
+
+/**
+ * Padding and margins.
+ *
+ * Used to keep consistent padding and spacing between objects / vertical rhythm.
+ */
+$horizontal-margin: 20px;
+$vertical-margin: 16px;
+
+/**
+ * Colours.
+ */
+$black: #000;
+$white: #fff;
+$green: green;
+$red: red;
+
+/**
+ * Font stacks.
+ */
+$base-font-family: Arial, etc;
+$heading-font-family: 'Comic Sans';
+
+/**
+ * Font sizing.
+ *
+ * Set in px to ensure we have IE8 support when using REM.
+ */
+$heading-1-size: 32px;
+$heading-2-size: 24px;
+$heading-3-size: 22px;
+$heading-4-size: 18px;
+$base-text-size: 16px;
+$small-text-size: 12px;

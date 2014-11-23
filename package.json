@@ -1,0 +1,16 @@
+{
+  "name": "example_theme",
+  "version": "1.0.0",
+  "author": "Eric Smith",
+  "homepage": "http://ericgsmith.co.uk",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-compass": "~1.0.0",
+    "grunt-contrib-csslint": "^0.3.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-hologram": "0.0.4"
+  }
+}

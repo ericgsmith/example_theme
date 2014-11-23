@@ -1,0 +1,29 @@
+/**
+ * @file
+ *  Theme style.
+ *
+ * This is an import only file. This file imports all our dependencies and project
+ * SCSS files in a specific order.
+ */
+
+// External dependencies.
+@import "compass";
+
+// Import abstractions first as they can be used in any file.
+@import "abstractions/functions";
+@import "abstractions/mixins";
+
+// Import variables.
+@import "variables/variables";
+
+// Import base css files.
+@import "base/document";
+@import "base/forms";
+@import "base/lists";
+@import "base/media";
+@import "base/tables";
+@import "base/typography";
+
+// Import components.
+@import "components/buttons";
+@import "components/media_object";

@@ -1,4 +1,11 @@
-example_theme
-=============
+@todo: Title
 
-Example drupal theme
+@todo: Bundler
+
+@todo: SASS resources
+
+@todo: SMAC(BEM)SS resources
+
+@todo: Styleguide generation / resources
+
+@todo: Testing resources

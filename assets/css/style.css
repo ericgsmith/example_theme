@@ -1,0 +1,262 @@
+/**
+ * @file
+ *  Theme style.
+ *
+ * This is an import only file. This file imports all our dependencies and project
+ * SCSS files in a specific order.
+ */
+/**
+ * @file
+ *  Functions.
+ */
+/**
+ * Calculate REM size from pixel values.
+ *
+ * This function calculates the size in REM of a pixel value.
+ *
+ * @param $size
+ *  The size in REM.
+ * @param $base-size
+ *  The size of the base element.
+ * @return int
+ *  The REM value of the size.
+ */
+/**
+ * @file
+ *  Mixins.
+ */
+/**
+ * Font size with IE8 fallback.
+ *
+ * This mixin takes an REM size and returns the CSS for font size in REM with the
+ * fallback value in px for IE8 and below.
+ *
+ * @param $font-size
+ *  Size in px.
+ * @return css
+ *  Font size declarations.
+ */
+/**
+ * @file
+ *  Variables.
+ */
+/**
+ * Padding and margins.
+ *
+ * Used to keep consistent padding and spacing between objects / vertical rhythm.
+ */
+/**
+ * Colours.
+ */
+/**
+ * Font stacks.
+ */
+/**
+ * Font sizing.
+ *
+ * Set in px to ensure we have IE8 support when using REM.
+ */
+/**
+ * @file
+ *  Document.
+ */
+/* line 10, ../sass/base/_document.scss */
+body {
+  font-size: 1em;
+}
+
+/**
+ * @file
+ *  Forms.
+ */
+/**
+ * @file 
+ *  Lists.
+ */
+/* line 6, ../sass/base/_lists.scss */
+ul {
+  list-style: none;
+}
+
+/**
+ * @file 
+ *  Media.
+ */
+/**
+ * @file 
+ *  Tables.
+ */
+/**
+ * @file 
+ *  Typography.
+ */
+/**
+ * @file 
+ *  Buttons.
+ */
+/*doc
+---
+title: Buttons
+name: button
+category: components
+---
+
+Buttons are typically applied to `a` or `button` elements.
+
+```html_example
+<a href="#" class="button">A link.</a>
+<button class="button">A button</button>
+```
+*/
+/* line 20, ../sass/components/_buttons.scss */
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: green;
+  border: 1px solid #004d00;
+  color: #fff;
+}
+
+/*doc
+---
+title: Button sizes
+name: button_size
+parent: button
+---
+
+Buttons have 3 sizes: small, medium (default), and large. Buttons also have an
+additional modifier class of full width.
+
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<button class="button button--large">Large</button>               | `button button--large`
+<button class="button">Default</button>                           | `button`
+<button class="button button--small">Small</button>               | `button button--small`
+<button class="button button--full-width">Full width</button>     | `button button--fullwidth`
+*/
+/* line 49, ../sass/components/_buttons.scss */
+.button--large {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+/* line 53, ../sass/components/_buttons.scss */
+.button--small {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+/* line 57, ../sass/components/_buttons.scss */
+.button--full-width {
+  width: 100%;
+}
+
+/*doc
+---
+title: Button skins
+name: button_skin
+parent: button
+---
+Button                                                  | Class
+------------------------------------------------------- | -----------------
+<button class="button">Primary (default)</button>       | `button`
+<button class="button--secondary">Secondary</button>    | `button--secondary`
+<button class="button--light">Light</button>            | `button--light`
+<button class="button--dark">Dark</button>              | `button--dark`
+*/
+/* line 75, ../sass/components/_buttons.scss */
+.button--secondary {
+  background: red;
+  border-color: #990000;
+  color: #fff;
+}
+
+/* line 81, ../sass/components/_buttons.scss */
+.button--light {
+  background: #fff;
+  border-color: #000;
+  color: #000;
+}
+
+/* line 87, ../sass/components/_buttons.scss */
+.button--dark {
+  background: #4d4d4d;
+  border-color: #000;
+  color: #fff;
+}
+
+/**
+ * @file 
+ *  Media Object.
+ */
+/*doc
+---
+title: Media object
+name: media_object
+category: components
+---
+
+The media object is a standard CSS design patter to display an item of content
+(usually an image) at it's natural width, floated to one size of content that
+does not overflow under the floated image.
+
+```html_example
+<div class="media-object">
+  <div class="media-object__media">
+    @insert image
+  </div>
+  <div class="media-object__body">
+    @insert paragraph
+  </div>
+</div>
+```
+*/
+/* line 28, ../sass/components/_media_object.scss */
+.media-object {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 32, ../sass/components/_media_object.scss */
+.media-object__media {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 37, ../sass/components/_media_object.scss */
+.media-object__body {
+  overflow: hidden;
+}
+
+/*doc
+---
+title: Media object modifiers
+name: media_object_modifiers
+parent: media_object
+---
+
+Modifiers to the media object.
+
+```html_example
+<div class="media-object--right">
+  <div class="media-object__media">
+    @insert image
+  </div>
+  <div class="media-object__body">
+    @insert paragraph
+  </div>
+</div>
+```
+*/
+/* line 62, ../sass/components/_media_object.scss */
+.media-object--right .media-object__media {
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+}
